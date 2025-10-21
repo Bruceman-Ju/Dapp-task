@@ -1,7 +1,7 @@
 package main
 
 import (
-	"dapp-task/utils"
+	"dapp-task/task1"
 	"fmt"
 )
 
@@ -22,8 +22,8 @@ func main() {
 	fmt.Println("---------------------------")
 
 	fmt.Println("任务 2：调用合约方法 addCount")
-	//task1.CallAddCount()
+	task1.CallAddCount()
 
-	utils.AddressAndPrivateKey()
+	//utils.AddressAndPrivateKey()
 
 }

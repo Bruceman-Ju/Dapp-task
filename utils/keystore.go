@@ -28,7 +28,7 @@ func AddressAndPrivateKey() (string, string) {
 	address := key.Address.Hex()
 	privateKey := hex.EncodeToString(crypto.FromECDSA(key.PrivateKey))
 
-	fmt.Println(fmt.Sprintf("address: %s,\nprivateKye: %s", address, privateKey))
+	fmt.Println(fmt.Sprintf("address: %s", address))
 
 	return address, privateKey
 }

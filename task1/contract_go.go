@@ -97,11 +97,14 @@ func CallAddCount() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("waiting 10 seconds for contract execution......")
 
-	for i := 0; i < 10; i++ {
+	waitSeconds := 15
+
+	fmt.Println("waiting", waitSeconds, "seconds for contract execution......")
+
+	for i := 0; i < waitSeconds; i++ {
 		time.Sleep(1 * time.Second)
-		fmt.Println(10-i, " seconds remaining")
+		fmt.Println(waitSeconds-i, " seconds remaining")
 	}
 
 	result, err := counterInstance.CurrentCount(&bind.CallOpts{})
